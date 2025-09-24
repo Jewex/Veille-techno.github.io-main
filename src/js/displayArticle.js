@@ -47,7 +47,7 @@ function displayArticle(article) {
 
     // Ajout de la date
     const dateElement = document.createElement('p');
-    dateElement.textContent = new Date(article.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+    dateElement.textContent = article.date;
     dateElement.classList.add('article-date');
 
     const description = document.createElement('p');
