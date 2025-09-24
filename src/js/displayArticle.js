@@ -1,5 +1,6 @@
 import articles from "../../articles/articles.js";
 
+const link = "https://notpunchnox.github.io/Veille-techno.github.io/articles/images/";
 const contentElement = document.querySelector('.article-list');
 const categories = {DEV: 'Développement', ROBOTIC: 'Robotique', AI: 'Intelligence Artificielle', CYBER: 'Cyber-sécurité'};
 
@@ -67,7 +68,7 @@ function displayArticle(article) {
 
     article.images.forEach(i => {
         const imgParagraph = document.createElement('p');
-        imgParagraph.innerHTML = `<img src='${i.url}' alt='${i.caption.split(' ')[0]}' class='article-image'/>  <em>${i.caption}</em>`;
+        imgParagraph.innerHTML = `<img src='${link + i.url}' alt='${i.caption.split(' ')[0]}' class='article-image'/>  <em>${i.caption}</em>`;
         contentElement.appendChild(imgParagraph);
     });
 
