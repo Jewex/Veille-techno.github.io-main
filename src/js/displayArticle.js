@@ -6,8 +6,7 @@ const categories = {DEV: 'Développement', ROBOTIC: 'Robotique', AI: 'Intelligen
 
 function getRecentArticles(category) {
     return articles[category]
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, 5);
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
 function displayArticlesByCategory() {
